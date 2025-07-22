@@ -1,0 +1,170 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* MODIFIED: Changed gradient to purple-black */
+  background: linear-gradient(135deg, #4c1d95, #000000);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+header img {
+  width: 80px;
+  margin-top: 1rem;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+iframe {
+  margin: 2rem auto;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.feature h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.firefox-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.firefox-showcase img {
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.firefox-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.firefox-text h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.firefox-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.image-links {
+  margin: 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.image-links img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.image-links img:hover {
+  transform: scale(1.1);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  /* MODIFIED: Changed button color for better contrast */
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(76, 29, 149, 0.7);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 14px 30px rgba(76, 29, 149, 0.85);
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .firefox-showcase {
+    flex-direction: column;
+    text-align: center;
+  }
+  .firefox-text { text-align: center; }
+}
